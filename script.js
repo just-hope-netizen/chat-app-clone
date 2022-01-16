@@ -47,6 +47,23 @@ function collectTheValue(value) {
     profileAboutP.innerHTML = value
     
 }
+//-------------------------------------------//
+// for sidebar alert
+let newWidth = screen.availWidth;
+const colorsForSideBarAlert = {
+    network: "sorry your network is slow, refresh this page",
+    lowBattery : "your battery is low, plug in your phone"
+
+}
+const{lowBattery : ln, network: n} = colorsForSideBarAlert;
+console.log(newWidth);
+if (newWidth > 600) {
+    document.querySelector(".connection-p").innerText= `${n}
+    ${ln}`;
+}
+else{
+    document.getElementById("sidebar").style.backgroundColor = "green";
+}
 // for search-wrapper
 let searchBtn = document.getElementById("search-btn");
 let firstSvg = document.getElementById("search-svg");
